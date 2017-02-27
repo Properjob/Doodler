@@ -1,0 +1,54 @@
+* {
+    font-family: Verdana, Lucida Sans, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0px auto;
+    background-color:#222;
+}
+
+.contents {
+	display: flex;
+	display: -webkit-flex;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.content-padding {
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.content_text {
+	font-weight:bold;
+	font-size:5em;
+	color:#fff;
+}
+
+#canvas {
+	background-color: white;
+}
+
+.color-palette::before {
+	position: absolute;
+	content: "";
+	top: 6px;
+	left: 6px;
+	width: 100%;
+	height: 100%;
+	background-image: url(./images/color_palette.png);
+	background-repeat: no-repeat;
+}
+
+.toolbox::before {
+	position: absolute;
+	content: "";
+	top: 6px;
+	left: 6px;
+	width: 100%;
+	height: 100%;
+	background-image: url(./images/toolbox.png);
+	background-repeat: no-repeat;
+}
