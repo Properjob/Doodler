@@ -11,18 +11,34 @@
 <body>
 	<div class="ui-page ui-page-active" id="main">
 		<canvas id="canvas" width="360" height="360"></canvas>
+		<footer class="ui-footer ui-bottom-button">
+      		<a class="ui-btn" id="btnOptions">Options</a>
+   		</footer>
 	</div>
 	
-	<div class="ui-page" id="selectorPage">
-		<div id="selector" class="ui-selector">
-			<div class="ui-item color-palette" data-title="Color Palette"></div>
-			<div class="ui-item toolbox" data-title="Toolbox"></div>
+	<div class="ui-page" id="pageMenu">
+		<div id="selectorMenu" class="ui-selector">
+			<div class="ui-item color-palette" data-title="Color Palette" id="Color_Palette"></div>
+			<div class="ui-item toolbox" data-title="Toolbox" id="Toolbox"></div>
+		</div>
+	</div>
+	
+	<div class="ui-page" id="pageColorPalette">
+		<div id="selectorColorPalette" class="ui-selector">
+			<div class="ui-item red" data-title="Red" id="red"></div>
+			<div class="ui-item orange" data-title="Orange" id="orange"></div>
+			<div class="ui-item yellow" data-title="Yellow" id="yellow"></div>
+			<div class="ui-item lime" data-title="Lime" id="lime"></div>
+			<div class="ui-item green" data-title="Green" id="green"></div>
+			<div class="ui-item blue" data-title="Blue" id="blue"></div>
+			<div class="ui-item purple" data-title="Purple" id="purple"></div>
 		</div>
 	</div>
 	
 	<script type="text/javascript" src="lib/tau/wearable/js/tau.js"></script>
-	<script src="app.js"></script>
-	<script src="selector.js"></script>
+	<script src="src/app.js"></script>
+	<script src="src/selectorMenu.js"></script>
+	<script src="src/selectorColorPalette.js"></script>
 	<script src="lowBatteryCheck.js"></script>
 </body>
 <script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>

@@ -14,11 +14,16 @@
 		}
 	} );
 	
-	var lastX = 0, 
-    lastY = 0, 
-    mouseBtn = false, 
-    brushSize = 4;
-	var canvas, context;
+	var lastX = 0,
+		lastY = 0,
+		mouseBtn = false,
+		canvas, 
+		context,
+		Options;
+	
+	// Globals
+	brushSize = 4;
+	brushColor = "black";
 	
 	function init(){
 	
@@ -28,6 +33,13 @@
 		canvas.addEventListener('touchmove', drawStep);
 		canvas.addEventListener('touchend', stopDraw);				
 		canvas.addEventListener('mouseout', stopDraw);
+		//
+		Options = document.getElementById("btnOptions");
+		Options.addEventListener('click', OptionsClicked);        
+	}
+	
+	function OptionsClicked() {
+		tau.changePage("pageMenu");
 	}
 	
 	function updateLastPos(e)
@@ -60,7 +72,7 @@
 	   {
 	      updateLastPos(e);
 	      context.lineTo(lastX, lastY);
-	      context.strokeStyle="red";
+	      context.strokeStyle=brushColor;
 	      context.stroke();
 	   }
 	}
@@ -68,8 +80,6 @@
 	function stopDraw(e)
 	{			
 	   mouseBtn = false;
-	   tau.changePage("selectorPage");
-	   console.log("vnfdkbfd");
 	}
 	
 	init();

@@ -1,21 +1,22 @@
 (function(tau) {
-	var page = document.getElementById("selectorPage"),
-		selector = document.getElementById("selector"),
+	var page = document.getElementById("pageMenu"),
+		selector = document.getElementById("selectorMenu"),
 		selectorComponent,
 		clickBound;
 
 	/**
 	 * click event handler for the selector
 	 */
-	console.log("vnfdkbfd");
 	function onClick(event) {
-		var target = event.target;
-		//console.log(activeItem.getAttribute("data-title"));
-		/*
-		 * Default indicator class selector is "ui-selector-indicator".
-		 * If you want to show custom indicator sample code,
-		 * check the 'customIndicator.js' please.
-		 */
+		var target = event.target,
+		activeItem = selector.querySelector(".ui-item-active"),
+		id = activeItem.getAttribute("id");
+		//
+		if (id === "Color_Palette"){
+			tau.changePage("pageColorPalette");
+			return;
+		}
+		//
 		if (target.classList.contains("ui-selector-indicator")) {
 			//console.log("Indicator clicked");
 			return;
